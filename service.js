@@ -46,7 +46,7 @@ module.exports = app => {
         
         idx++;
        
-        if (idx == 2) {
+        if (idx == 1) {
           idx = 0;
           keyboard.push(keyboard3);
           keyboard3 = [];
