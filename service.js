@@ -52,24 +52,7 @@ module.exports = app => {
           keyboard3 = [];
         }
 
-        if(i == 9){
-          keyboard3.push({ text: message.messagePayload.globalActions[0].label });
-          
-          let startRange = message.messagePayload.globalActions[0].postback.variables["system.state.GetAgents.customsCommandRangeStart"];
-
-          if (typeof localStorage === "undefined" || localStorage === null) {
-            var LocalStorage = require('node-localstorage').LocalStorage;
-            localStorage = new LocalStorage('./scratch');
-          }
-
-          if (localStorage.getItem("rangeStart") === null) {
-            localStorage.setItem("rangeStart", startRange);
-          } else {
-            localStorage.setItem("rangeStart", startRange);
-          }
-          logger.info("This is the number");
-          logger.info(startRange);
-        }
+        
         
       }
 
